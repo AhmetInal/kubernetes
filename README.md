@@ -1,15 +1,26 @@
 # kubernetes
 controller ve node yapılacak 
+
 sudo apt-get update
+
 sudo apt-get upgrade
+
 sudo apt-get install docker.io -y
+
 sudo systemctl start docker
+
 sudo systemctl enable docker
+
 sudo usermod -aG docker $USER
+
 newgrp docker
+
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+
 sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+
 sudo apt-get install kubeadm kubelet kubectl -y
+
 ------------------------birinci kısım--------------------------
 
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=CONTROLLER IP
