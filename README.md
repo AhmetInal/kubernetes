@@ -24,12 +24,15 @@ sudo apt-get install kubeadm kubelet kubectl -y
 ------------------------birinci kısım--------------------------
 
 sudo snap install multipass --classic --stable
-multipass launch --name node1 --cpus 2 --mem 1024M --disk 10G
-
+multipass launch --name node1 --cpus 2 --mem 1024M --disk 5G
+---bilinmesi gereken komutlar
+	multipass start node1
+	multipass list
+	multipass shell node1
 ------------------------birinci kısım--------------------------
 
-sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=CONTROLLER IP
-----Sonucuta çıkan tokeni not al
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=CONTROLLER IP(multipass list denildiğinde ortak verilen ip)
+----Sonucuta çıkan tokeni not al, bu token node oluşturulduğu zaman o cluster katılmak için kullanılacak
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
