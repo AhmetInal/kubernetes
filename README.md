@@ -1,5 +1,7 @@
-# kubernetes
-controller ve node yapılacak 
+# kubernetes ağının multipass üzerinden naısl oluşturulabileceğinin anlatımı
+# Bir adet controller ve 2 adet noddan oluşan bir ağ tasarlanmaktadır
+
+controller ve node yapılacaklar
 
 sudo apt-get update
 
