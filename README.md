@@ -23,6 +23,11 @@ sudo apt-get install kubeadm kubelet kubectl -y
 
 ------------------------birinci kısım--------------------------
 
+sudo snap install multipass --classic --stable
+multipass launch --name node1 --cpus 2 --mem 1024M --disk 10G
+
+------------------------birinci kısım--------------------------
+
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=CONTROLLER IP
 ----Sonucuta çıkan tokeni not al
 
