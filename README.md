@@ -7,6 +7,12 @@ sudo apt-get update
 
 sudo apt-get upgrade
 
+sudo -i
+
+swapoff -a
+
+exit
+
 sudo apt-get install docker.io -y
 
 sudo systemctl start docker
